@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "d49eb271-d957-4deb-94e2-0e0e15e315d2",
+		"name": "Task4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8585/foto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"colors\": {\r\n      \"color\": \"black\",\r\n      \"category\": \"hue\",\r\n      \"type\": \"primary\",\r\n      \"code\": {\r\n         \"rgba\": \"255,255,255,1\",\r\n         \"hex\": \"#000\"\r\n      }\r\n   },\r\n   \"thumbnail\": {\r\n      \"url\": \"images/thumbnails/0001.jpg\",\r\n      \"width\": 32,\r\n      \"height\": 32\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8585/foto",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"foto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8585/human",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"Molecule Man\",\r\n   \"age\":29,\r\n   \"secretIdentity\":\"Dan Jukes\",\r\n   \"powers\":{\r\n      \"Task1\":\"Radiation resistance\",\r\n      \"Task2\":\"Turning tiny\",\r\n      \"Task3\":\"Radiation blast\"\r\n   },\r\n   \"errors\":{\r\n      \"status\":\"422\",\r\n      \"source\":{\r\n         \"pointer\":\"/data/attributes/firstName\"\r\n      },\r\n      \"title\":\"Invalid Attribute\",\r\n      \"detail\":\"First name must contain at least three characters.\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8585/human",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"human"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
